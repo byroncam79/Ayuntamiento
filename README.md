@@ -1,0 +1,125 @@
+# Ayuntamiento
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulación Seguridad Social</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+        }
+
+        .header {
+            background-color: #003366;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 500px;
+            background: white;
+            margin: 40px auto;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #003366;
+        }
+
+        input {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #003366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #00509e;
+        }
+
+        .alert {
+            background-color: #ffe0e0;
+            color: #900;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .footer {
+            font-size: 12px;
+            color: gray;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Portal de Acceso</h1>
+    <p>Servicios Administrativos</p>
+</div>
+
+<div class="container">
+
+    <div class="alert">
+        ⚠️ SIMULACIÓN EDUCATIVA DE CIBERSEGURIDAD<br>
+        Este formulario NO pertenece a ningún organismo oficial.<br>
+        No introduzcas datos reales.
+    </div>
+
+    <h2>Acceso de Usuario</h2>
+
+    <input type="text" id="dni" placeholder="DNI / NIE">
+    <input type="text" id="naf" placeholder="Número de afiliación">
+    <input type="password" id="clave" placeholder="Clave de acceso">
+
+    <button onclick="simular()">Acceder</button>
+
+    <div class="footer">
+        Ejercicio de concienciación en ciberseguridad
+    </div>
+
+</div>
+
+<script>
+function captura() {
+    let dni = document.getElementById("dni").value;
+    let clave = document.getElementById("clave").value;
+
+    if(dni === "" || clave === ""){
+        alert("Complete los campos");
+    } else {
+        alert("🚨 ATAQUE SIMULADO 🚨\n\nTus datos habrían sido capturados.\n\nAhora serás redirigido a la web oficial.");
+
+        // Espera 2 segundos y redirige
+        setTimeout(function() {
+            window.location.href = "https://www.madrid.es/portal/site/munimadrid";
+        }, 2000);
+    }
+}
+</script>
+
+</body>
+</html>
